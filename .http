@@ -1,0 +1,29 @@
+@domain = http://localhost:3000
+
+# 회원가입
+###
+POST {{domain}}/user/signup
+Content-Type: application/json
+
+{
+  "email": "example1@gmail.com",
+  "password": "aaaa111!",
+  "passwordConfirm": "aaaa111!",
+  "nickName": "욱기정"
+}
+
+# 로그인
+###
+POST {{domain}}/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "example1@gmail.com",
+  "password": "aaaa111!"
+}
+
+# 리프래쉬
+###
+POST {{domain}}/auth/refresh
+Content-Type: application/json
+Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzA0NTMxNDI5LCJleHAiOjE3MDQ1MzMyMjl9.zrmA4f0YMMKZlY1mFJkDv3lpydSZ5-z2aPUMQtaeOgU
